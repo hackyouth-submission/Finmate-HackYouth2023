@@ -1,30 +1,42 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
-import Login from "../pages/Login";
-import Register from "../pages/Register";
+import Login, {checkLogin} from "../pages/Login/Login";
+import Register, {checkRegister} from "../pages/Login/Register";
 import Home from "../pages/Home";
-
+import Project, {loader} from "../pages/Project/Project";
 
 const AuthLayout = () => {
-    return <Outlet />
-}
+  return <Outlet />;
+};
 
-export default createBrowserRouter([
-    {
-        element: <AuthLayout />,
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "",
+        element: <Home />,
         children: [
-            {
-                path: '/login',
-                element: <Login />
-            },
-            {
-                path: '/register',
-                element: <Register />
-            },
-            {
-                path: '/',
-                element: <Home />
-            }
-        ]
-    }
+          {
+            path: "login",
+            element: <Login />,
+            action: checkLogin
+          },
+          {
+            path: "register",
+            element: <Register />,
+            action: checkRegister
+          },
+          {
+            path: "project/:pageNum",
+            element: <Project />,
+            loader: loader
+          },
+          
+        ],
+      },
+    ],
+  },
 ]);
 
+export default router;
