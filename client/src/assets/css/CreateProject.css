@@ -1,0 +1,88 @@
+select,
+input {
+  width: max-content;
+  background: #fff8ec;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 46px;
+  border: none;
+  padding: 5px 0px 5px 10px;
+}
+
+select,
+input::selection,
+select,
+input:focus,
+select,
+input {
+  border: none;
+}
+
+.row {
+  margin-top: 1%;
+}
+
+#date-blurb {
+  margin-top: 5%;
+  font-family: "DM Sans";
+  font-style: italic;
+  font-weight: 400;
+  color: #4318ff;
+  opacity: 0.7;
+}
+
+label {
+  display: block;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: bold;
+
+  color: #170f49;
+}
+
+form {
+  width: 95vw;
+}
+
+.half {
+  width: 40vw;
+}
+
+.third {
+  width: 13vw;
+}
+
+.two-third {
+  width: 25vw;
+}
+
+.full {
+  width: 85vw;
+}
+
+.radio {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: none;
+}
+
+.radio-label {
+  display: inline;
+}
+
+label > img {
+  max-width: 10vw;
+  max-height: 5vh;
+}
+
+button {
+  width: 20vw;
+  background: #abd580;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 46px;
+  border: none;
+  padding: 5px 0px 5px 10px; 
+}
+
+#button-box {
+    text-align: center;
+}

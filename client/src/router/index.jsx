@@ -1,8 +1,9 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
-import Login, {checkLogin} from "../pages/Login/Login";
-import Register, {checkRegister} from "../pages/Login/Register";
+import Login, {checkLogin} from "../pages/Login";
+import Register, {checkRegister} from "../pages/Register";
 import Home from "../pages/Home";
-import Project, {loader} from "../pages/Project/Project";
+import Project, {loader} from "../pages/Project";
+import CreateProject from "../pages/createProject";
 
 const AuthLayout = () => {
   return <Outlet />;
@@ -32,7 +33,10 @@ const router = createBrowserRouter([
             element: <Project />,
             loader: loader
           },
-          
+          {
+            path: "create_project",
+            element: <CreateProject />,
+          },
         ],
       },
     ],

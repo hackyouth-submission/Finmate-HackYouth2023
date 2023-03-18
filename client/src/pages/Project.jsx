@@ -3,8 +3,9 @@ import { useLoaderData } from "react-router";
 import { Nav } from "react-bootstrap";
 import Pagination from "react-bootstrap/Pagination";
 import ProjectPage from "./ProjectPage";
-import sampleImage from "../../assets/images/sample.png";
+import sampleImage from "../assets/images/sample.png";
 // import { getAllProject } from "../../models/ProjectInfoCardDAO";
+import "../assets/css/Project.css"
 
 const NUM_PER_PAGE = 9;
 const NUM_PER_ROW = 3;
@@ -25,7 +26,7 @@ export default function Project() {
   let items = [];
   for (
     let number = pageNumber - 2 < 1 ? 1 : pageNumber;
-    number <= projectList.length || number <= pageNumber + 2;
+    number <= ~~(projectList.length / NUM_PER_PAGE)+1 && number <= pageNumber + 2;
     number++
   ) {
     items.push(
@@ -35,28 +36,38 @@ export default function Project() {
     );
   }
 
+  
+
   let paging = [
-    <Pagination.First />,
-    <Pagination.Prev />
+    <Pagination.First key={"first"}/>,
+    <Pagination.Prev key={"prev"} />
   ];
+
+  if (~~(projectList.length / NUM_PER_PAGE) >
+   pageNumber + 2) {
+    paging.push(<Pagination.Item key={"firstItem"}>{1}</Pagination.Item>);
+  }
   
   if (~~(projectList.length / NUM_PER_PAGE) > MAX_PAGE_DISPLAY) {
-    paging.push(<Pagination.Ellipsis />);
+    paging.push(<Pagination.Ellipsis key={"ellipsis1"} />);
   }
+
   paging = paging.concat(items);
+
   if (~~(projectList.length / NUM_PER_PAGE) > MAX_PAGE_DISPLAY) {
-    paging.push(<Pagination.Ellipsis />);
+    paging.push(<Pagination.Ellipsis key={"ellipsis1"} />);
   }
   if (~~(projectList.length / NUM_PER_PAGE) > pageNumber + 2) {
     paging.push(
-      <Pagination.Item>{~~(projectList.length / NUM_PER_PAGE)}</Pagination.Item>
+      <Pagination.Item key={"last-page"}>{~~(projectList.length / NUM_PER_PAGE)}</Pagination.Item>
     );
   }
-  paging.push(<Pagination.Next />, <Pagination.Last />);
+  paging.push(<Pagination.Next key={"next"}/>, <Pagination.Last key={"last"}/>);
 
   return (
     <article>
       <ProjectPage
+      id ="page"
         pageNum={pageNumber}
         projectList={projectList}
         perPage={NUM_PER_PAGE}

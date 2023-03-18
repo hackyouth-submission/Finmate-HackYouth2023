@@ -1,6 +1,6 @@
 import { Form } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import "../../assets/css/Login_Register.css";
+import "../assets/css/Login_Register.css";
 
 function Login() {
   return (

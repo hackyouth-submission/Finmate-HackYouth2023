@@ -1,7 +1,6 @@
 import { MiniInfoCard } from "./InfoCard";
 
 import { Container, Row, Col } from "react-bootstrap";
-import "../../assets/css/InfoCard.css"
 //main products
 
 //perPage % perRow == 0!!!

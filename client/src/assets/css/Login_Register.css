@@ -41,7 +41,7 @@ input [type="text"], input [type="password"] {
 }
 
 form {
-  box-shadow: 0px 0px 4px 4px rgba(242, 242, 242, 1);
+  box-shadow: 4px 4px rgba(242, 242, 242, 1);
   padding: 0% 5% 5% 5%;
   margin: 0.5% 0% 2% 0%;
   width: 70vw;
