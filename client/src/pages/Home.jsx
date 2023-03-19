@@ -1,4 +1,4 @@
-import Header from "../components/layout/header";
+import Header from "../components/layout/Header";
 import '../components/css/Style.css'
 
 function Home() {
