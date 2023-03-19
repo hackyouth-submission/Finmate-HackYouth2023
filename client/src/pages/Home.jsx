@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import Header from "../components/layout/Header";
-=======
-import Header from "../components/layout/Header"
->>>>>>> 2e76fa4a69ec05fe20f61355003f01bcbb6bf4d5
 import '../components/css/Style.css'
 
 import React, { useRef, useState } from "react"

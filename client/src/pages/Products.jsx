@@ -1,7 +1,4 @@
 import '../components/css/Style.css'
-<<<<<<< HEAD
-import Header from "../components/layout/Header";
-=======
 import Header from "../components/layout/header";
 import { AudioOutlined, SearchOutlined } from '@ant-design/icons';
 import { Input, Space } from 'antd';
@@ -61,7 +58,6 @@ const products = [
     }
 ]
 
->>>>>>> 2e76fa4a69ec05fe20f61355003f01bcbb6bf4d5
 function Products() {
     return (
         <div>
