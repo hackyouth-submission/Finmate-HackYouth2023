@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ShoppingCartOutlined, HeartOutlined, StarFilled, HeartFilled } from '@ant-design/icons';
 import { InputNumber } from 'antd';
 import './BookCard.css'
+import {Link} from 'react-router-dom'
 
 
 
@@ -23,7 +24,7 @@ function BookCard({ id, title, creator,description, image, totalTarget, dateStar
                         <h3>by <a href="">{creator}</a></h3>
                         <div href="" className="btn-like" onClick={heartClick}>{heartIcon}</div>
                     </div>
-                    <h2>{title}</h2>
+                    <Link to="/products/123"><h2>{title}</h2></Link>
                     <p>{description}</p>
                     <div className='quantity'>
                         <div>Total Target: ${totalTarget}</div>

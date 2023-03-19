@@ -10,7 +10,7 @@ import NotFound from '../pages/NotFound';
 const publicRoutes = [
     { path: '/', component: Home},
     { path: '/products', component: Products},  
-    { path: '/products/:id', component: DetailsProduct}, 
+    { path: '/products/123', component: DetailsProduct}, 
     { path: '/createproduct', component: CreateProduct}, 
     { path: '/portfolio', component: Portfolio}, 
     { path: '/login', component: Login},   

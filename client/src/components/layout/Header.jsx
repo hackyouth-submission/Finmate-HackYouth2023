@@ -1,8 +1,24 @@
 import './Header.css'
 import logo from '../../assets/logo.png'
 import { Link } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom';
+import axios from 'axios'
 
 function Header() {
+    const navigate = useNavigate();
+    async function logout(e) {
+        navigate("/login");
+        e.preventDefault();
+        try {
+            await axios.get("http://localhost:5000/api/user/logout")
+                .then(response => {
+                    console.log(response.data);
+                    navigate("/login");
+                })
+        } catch (err) {
+            console.log(err)
+        }
+    }
     return (
         <div className='header'>
             <div className="navbar">
@@ -14,7 +30,9 @@ function Header() {
                     <Link className='link-nav' to="/">Home</Link>
                     <Link className='link-nav' to="/products">Products</Link>
                     <Link className='link-nav' to="/portfolio">Portfolio</Link>
+                    
                 </div>
+                <div className='btn-logout' onClick={logout}> Logout </div>
             </div>
             <div className='line'></div>
         </div>
