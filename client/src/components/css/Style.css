@@ -288,6 +288,10 @@ input:focus {
   border: none;
 }
 
+#create-project-container .paragraph {
+  height: 20vh;
+}
+
 #create-project-container .row {
   margin-top: 1%;
 }
