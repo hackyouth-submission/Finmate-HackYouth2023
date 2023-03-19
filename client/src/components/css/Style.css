@@ -367,9 +367,6 @@ input:focus {
   margin-top: 5%;
 }
 
-#detail-product-container .nav-tabs {
-  justify-content: center;
-}
 
 #detail-product-container .proj-info {
   width: 75vw;
@@ -392,7 +389,7 @@ input:focus {
 	margin-left: 90px;
 }
 
-#detail-product-container button {
+/* #detail-product-container button {
   background-color: rgba(255, 224, 131, 1);
   color: #fff;
   width: fit-content;
@@ -400,7 +397,7 @@ input:focus {
 #detail-product-container button:active,
 #detail-product-container button:focus {
   background-color: rgba(255, 193, 7, 1);
-}
+} */
 
 
 #detail-product-container #project-avatar {
