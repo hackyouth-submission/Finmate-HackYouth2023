@@ -1,13 +1,16 @@
-
-
-
-import './App.css'
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { publicRoutes } from './router'
 
 function App() {
-
   return (
-    <p>Finmate</p>
+    <Router>
+      <Routes>
+        {publicRoutes.map((route, index) => {
+          const Page = route.component;
+          return <Route key={index} path={route.path} element={ <Page />} />;
+        })}
+      </Routes>
+    </Router>
   )
 }
 

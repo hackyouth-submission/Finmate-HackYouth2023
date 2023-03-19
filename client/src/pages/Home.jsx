@@ -1,5 +1,13 @@
+import Header from "../components/layout/header";
+import '../components/css/Style.css'
+
 function Home() {
-    return ( <p>Home</p> );
+    return (
+        <div>
+            <Header />
+            Home
+        </div>
+    );
 }
 
 export default Home;
