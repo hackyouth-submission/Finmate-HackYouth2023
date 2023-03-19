@@ -122,4 +122,6 @@ function Login() {
     );
 }
 
+export async function checkLogin() {}
+
 export default Login;

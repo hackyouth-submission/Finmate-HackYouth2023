@@ -1,0 +1,74 @@
+.log_reg {
+  justify-items: center;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.prompt {
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+.mini-prompt {
+  opacity: 0.75;
+  font-size: 1vw;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+}
+
+section {
+  display: block;
+  font-weight: bold;
+  font-size: 1vw;
+  padding-top: 5%;
+}
+
+input {
+  border-radius: 54px;
+  border-color: rgba(142, 142, 142, 1);
+  width: 60vw;
+}
+
+input [type="text"], input [type="password"] {
+    width: 100%;
+    padding: 22px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+form {
+  box-shadow: 4px 4px rgba(242, 242, 242, 1);
+  padding: 0% 5% 5% 5%;
+  margin: 0.5% 0% 2% 0%;
+  width: 70vw;
+  text-align: left;
+  border-radius: 54px;
+}
+
+.btn-warning,
+.btn-warning:hover {
+  color: #fff;
+}
+
+button {
+  background-color: rgba(253, 163, 26);
+  width: 60vw;
+  font-size: 1vw;
+  box-shadow: 0px 0px 2px 2px lightgray;
+  padding: 0% 5% 2% 5%;
+  margin: 0.5% 0% 2% 0%;
+}
+
+.forget-password {
+  color: #000;
+}
+
+.forget-password:hover {
+  color: #000;
+  text-decoration: none;
+  opacity: 0.5;
+}
