@@ -15,7 +15,6 @@ function Login() {
             return document.getElementById('container').classList.remove("right-panel-active");
         }
     };
-
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
