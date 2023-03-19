@@ -6,7 +6,7 @@ import Login from '../pages/Login'
 import CreateProject from '../pages/CreateProject';
 import NotFound from '../pages/NotFound';
 
-
+import Test2 from '../pages/test2.'
 const publicRoutes = [
     { path: '/', component: Home},
     { path: '/products', component: Products}, 
@@ -15,5 +15,6 @@ const publicRoutes = [
     { path: '/portfolio', component: Portfolio}, 
     { path: '/login', component: Login},  
     { path: '*', component: NotFound},
+    {path: '/test2', element: <Test2 />}
 ]
 export { publicRoutes };
