@@ -15,32 +15,32 @@ export default function CreateProject() {
         <div>
           <div className="row">
             <div className="col-12">
-              <label>Customer survey: </label>
-              <input className="full" id="cust" name="cust" type={"text"} />
+              <label>Bảng khảo sát khách hàng của bạn: </label>
+              <input className="full paragraph" id="cust" name="cust" type={"text"} />
             </div>
           </div>
           <div className="row">
             <div className="col-12">
-              <label>Product test results? </label>
-              <input className="full" id="test" name="test" type={"text"} />
+              <label>Kết quả thử nghiệm sản phẩm của bạn:</label>
+              <input className="full paragraph" id="test" name="test" type={"text"} />
             </div>
           </div>
           <div className="row">
             <div className="col-12">
-              <label>(Beta) product link? </label>
-              <input className="full" id="beta" name="beta" type={"text"} />
+              <label>Sản phẩm (bản beta) </label>
+              <input className="full paragraph" id="beta" name="beta" type={"text"} />
             </div>
           </div>
           <div className="row">
             <div className="col-12">
-              <label>Business report </label>
-              <input className="full" id="business" name="business" type={"text"} />
+              <label>Tổng hợp kết quả kinh doanh của bạn:</label>
+              <input className="full paragraph" id="business" name="business" type={"text"} />
             </div>
           </div>
           <div className="row">
             <div className="col-12">
-              <label>What are your detailed plans to use the funds you will raise? </label>
-              <input className="full" id="plans" name="plans" type={"text"} />
+              <label>Kế hoạch sử dụng nguồn quỹ gọi vốn của bạn?</label>
+              <input className="full paragraph" id="plans" name="plans" type={"text"} />
             </div>
           </div>
         </div>
@@ -56,11 +56,11 @@ export default function CreateProject() {
       <form>
         <div className="row">
           <div className="col-6">
-            <label>Project name </label>
+            <label>Tên dự án </label>
             <input className="half" id="pname" name="pname" type={"text"} />
           </div>
           <div className="col-6">
-            <label>Project owner name </label>
+            <label>Tên chủ dự án</label>
             <input
               className="half"
               id="pownname"
@@ -71,16 +71,16 @@ export default function CreateProject() {
         </div>
         <div className="row">
           <div className="col-6">
-            <label>Fields</label>
+            <label>Lĩnh vực của bạn</label>
             <select className="half">
-              <option value={"Environment"}>Environment</option>
-              <option value={"Science"}>Science</option>
+              <option value={"Environment"}>Môi trường</option>
+              <option value={"Science"}>Khoa học</option>
             </select>
           </div>
           <div className="col-6">
             <div className="row">
               <div className="col-4">
-                <label>Phone number </label>
+                <label>Số điện thoại </label>
                 <input
                   className="third"
                   id="phone"
@@ -102,45 +102,45 @@ export default function CreateProject() {
         </div>
         <div className="row">
           <div className="col-12">
-            <label>Which organization does this project belong to? </label>
+            <label>Dự án này được quản lý bởi tổ chức nào?</label>
             <input className="full" id="company" name="company" type={"text"} />
           </div>
         </div>
         <div className="row">
           <div className="col-12">
-            <label>Project description </label>
-            <input className="full" id="desc" name="desc" type={"text"} />
+            <label>Miêu tả sơ lược dự án</label>
+            <input className="full paragraph" id="desc" name="desc" type={"text"} />
           </div>
         </div>
         <div className="row">
           <div className="col-12">
-            <label>Why did you launch this project? </label>
-            <input className="full" id="why" name="why" type={"text"} />
+            <label>Tại sao bạn muốn bắt đầu dự án này?</label>
+            <input className="full paragraph" id="why" name="why" type={"text"} />
           </div>
         </div>
         <div className="row">
           <div className="col-12">
             <label>
-              What are your project's risks and how would you tackle it?{" "}
+              Dự án của bạn có những rủi ro như thế nào và bạn có kế hoạch nào để đối đầu với nó
             </label>
-            <input className="full" id="risks" name="risks" type={"text"} />
+            <input className="full paragraph" id="risks" name="risks" type={"text"} />
           </div>
         </div>
         <div className="row">
           <div className="col-12">
-            <label>What is your project contribute to society? </label>
-            <input className="full" id="contri" name="contri" type={"text"} />
+            <label>Dự án của bạn đóng góp thế nào cho xã hội? </label>
+            <input className="full paragraph" id="contri" name="contri" type={"text"} />
           </div>
         </div>
         <div className="row">
           <div className="col-6">
-            <label>How much does your project need? </label>
+            <label>Dự án của bạn yêu cầu nguồn vốn bao nhiêu? </label>
             <input className="half" id="money" name="money" type={"number"} />
           </div>
           <div className="col-6">
             <div className="row">
               <div className="col-7">
-                <label>How long do you want to call to invest? </label>
+                <label>Bạn muốn gọi vốn bao lâu?</label>
                 <input
                   className="two-third"
                   id="time"
@@ -149,13 +149,13 @@ export default function CreateProject() {
                 />
               </div>
               <div className="col-4" id="date-blurb">
-                *Project is approved after 5 - 7 days
+                *Dự án sẽ được phê duyệt sau 5-7 ngày
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-12">
-              <label>Which bank do you want to receive the funds in? </label>
+              <label>Bạn muốn nhận tiền gọi vốn qua đâu? </label>
               <div>
                 <input
                   className="radio"
@@ -207,14 +207,14 @@ export default function CreateProject() {
             }
           />
           <label className="radio-label">
-            Do you want to be verified by ___?
+            Bạn có muốn được xác thực bởi Công ty Kiểm toán DeLotte?
           </label>
         </div>
 
         {verify}
 
         <div id="button-box">
-          <button type="Submit">Submit</button>
+          <button type="Submit">Hoàn thành</button>
         </div>
       </form>
     </div>
