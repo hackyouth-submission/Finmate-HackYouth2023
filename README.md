@@ -8,6 +8,13 @@ Then, install <a href="https://react.dev/">reactjs</a> and <a href="https://ant.
 >$ npm install antd
 
 ## How to run
+
+>$ cd server
+>
+>$ npm run dev
+
+Afterwards
+
 >$ cd client
 >
 >$ npm run dev
