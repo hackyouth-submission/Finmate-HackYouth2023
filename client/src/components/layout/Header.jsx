@@ -7,12 +7,17 @@ import axios from 'axios'
 function Header() {
     const navigate = useNavigate();
     async function logout(e) {
-        navigate("/login");
         e.preventDefault();
         try {
-            await axios.get("http://localhost:5000/api/user/logout")
+            await axios.get("http://localhost:5000/api/user/logout", 
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                }
+            )
                 .then(response => {
                     console.log(response.data);
+                    alert('Logout thanh cong')
                     navigate("/login");
                 })
         } catch (err) {

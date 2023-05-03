@@ -25,9 +25,14 @@ function Login() {
     async function submit(e) {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/api/user/login", { email, password })
+            await axios.post("http://localhost:5000/api/user/login", { email, password },
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                }
+            )
                 .then(response => {
-                    console.log(response.data);
+                    alert('Login Successful !!!')
                     navigate("/");
                 })
         } catch (err) {
@@ -37,8 +42,20 @@ function Login() {
     }
     async function register(e) {
         e.preventDefault();
+        const user = {
+            name: name,
+            mobile: mobile,
+            email: email,
+            password: password
+        }
+        console.log(user)
         try {
-            await axios.post("http://localhost:5000/api/user/register", { name, mobile , email, password })
+            await axios.post("http://localhost:5000/api/user/register", user,
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                }
+            )
                 .then(response => {
                     console.log(response.data);
                     document.getElementById('container').classList.remove("right-panel-active");

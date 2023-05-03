@@ -1,0 +1,31 @@
+
+
+POST http://localhost:5000/api/user/register
+Content-Type: application/json
+
+{
+    "name": "Quan",
+    "email": "quan.hoang@gmail.com",
+    "mobile":"0123",
+    "password": "123"
+}
+
+
+###
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email": "quan.hoang.kido1224@gmail.com",
+    "password": "123"
+}
+
+###
+GET http://localhost:5000/api/user/logout
+
+
+
+
+
+###
+GET  http://localhost:5000/api/user/current

@@ -1,10 +1,10 @@
 import Header from "../components/layout/Header"
 import '../components/css/Style.css'
 
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
-
+import { Link, useNavigate } from 'react-router-dom';
 // Import Swiper styles
 import "swiper/css"
 import "swiper/css/free-mode"
@@ -12,6 +12,8 @@ import "swiper/css/pagination"
 import { FreeMode, Pagination } from "swiper"
 import BookCard from "../components/book-card/BookCard"
 import { SnippetsFilled } from '@ant-design/icons'
+import axios from "axios"
+import { Navigate } from "react-router-dom"
 
 const products = [
     {
@@ -69,6 +71,34 @@ const products = [
 
 
 function Home() {
+    const navigate = useNavigate();
+    const [user, setUser] = useState({});
+
+    const fetchUser = async () => {
+        try {
+            await axios.get("http://localhost:5000/api/user/current",
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${accessToken}`
+                    },
+                    withCredentials: true,
+                }
+            ).then(response => {
+                setUser(response.data);
+            })
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        fetchUser();
+        /* if (user) {
+            navigate('/login')
+        } */
+    }, [])
+
     return (
         <div className="home">
             <Header />
@@ -83,20 +113,20 @@ function Home() {
                         </div>
                     </div>
                     <div className="product-invest">
-                        
-                            <div className="numberTotal-projects">
-                                <h3>Clean Water for Everyone</h3>
-                                <p>$10000</p>
-                            </div>
-                            <div className="numberTotal-projects">
-                                <h3>Clean Water for Everyone</h3>
-                                <p>$10000</p>
-                            </div>
-                            <div className="numberTotal-projects">
-                                <h3>Clean Water for Everyone</h3>
-                                <p>$10000</p>
-                            </div>
-                        
+
+                        <div className="numberTotal-projects">
+                            <h3>Clean Water for Everyone</h3>
+                            <p>$10000</p>
+                        </div>
+                        <div className="numberTotal-projects">
+                            <h3>Clean Water for Everyone</h3>
+                            <p>$10000</p>
+                        </div>
+                        <div className="numberTotal-projects">
+                            <h3>Clean Water for Everyone</h3>
+                            <p>$10000</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
